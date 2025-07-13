@@ -1,0 +1,118 @@
+.my-orders {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.my-orders h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #333;
+}
+
+/* Stack orders vertically */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Horizontal layout inside each order */
+.my-orders-order {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  gap: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.my-orders-order img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* General text styling */
+.my-orders-order p {
+  margin: 0;
+  font-size: 15px;
+  color: #444;
+  white-space: nowrap;
+}
+
+/* Order items summary */
+.my-orders-order .items {
+  flex: 1;
+  min-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Amount styling */
+.my-orders-order .price {
+  width: 80px;
+  text-align: right;
+  font-weight: bold;
+}
+
+/* Item count */
+.my-orders-order .count {
+  width: 70px;
+  text-align: center;
+}
+
+/* Order status */
+.my-orders-order .status {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: bold;
+}
+
+.my-orders-order .status span {
+  font-size: 16px;
+  color: #ffa500; /* Orange for 'processing' */
+}
+
+/* Track order button */
+.my-orders-order button {
+  padding: 10px 16px;
+  background-color: tomato;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.2s ease;
+}
+
+.my-orders-order button:hover {
+  background-color: rgb(135, 45, 29);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .my-orders-order {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .my-orders-order p,
+  .my-orders-order button {
+    width: 100%;
+  }
+
+  .my-orders-order .items {
+    white-space: normal;
+  }
+}

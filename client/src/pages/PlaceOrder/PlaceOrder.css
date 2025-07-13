@@ -1,0 +1,163 @@
+.place-order {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.place-order-left {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.place-order-left .title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.place-order-left input {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.multi-fields {
+  display: flex;
+  gap: 15px;
+}
+
+.multi-fields input {
+  flex: 1;
+}
+
+.place-order-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.cart-total {
+  background-color: #f9f9f9;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.cart-total h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.cart-total-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 15px;
+  color: #444;
+}
+
+.cart-total hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+.cart-total button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: tomato;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-total button:hover {
+  background-color: rgb(210, 63, 37);
+}
+
+/* Tablets and below (≤ 768px) */
+@media (max-width: 768px) {
+  .place-order {
+    flex-direction: column;
+    padding: 25px 20px;
+  }
+
+  .multi-fields {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cart-total {
+    margin-top: 30px;
+  }
+}
+
+/* Mobile (≤ 500px) */
+@media (max-width: 500px) {
+  .place-order {
+    padding: 20px 15px;
+    gap: 25px;
+  }
+
+  .place-order-left .title,
+  .cart-total h2 {
+    font-size: 20px;
+  }
+
+  .place-order-left input {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .cart-total-details {
+    font-size: 14px;
+  }
+
+  .cart-total button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* Ultra small devices (≤ 350px) */
+@media (max-width: 350px) {
+  .place-order {
+    padding: 15px 10px;
+  }
+
+  .place-order-left input {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .cart-total h2 {
+    font-size: 18px;
+  }
+
+  .cart-total-details {
+    font-size: 13px;
+  }
+
+  .cart-total button {
+    padding: 8px;
+    font-size: 13px;
+  }
+}
