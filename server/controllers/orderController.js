@@ -6,8 +6,8 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 const placeOrder = async (req, res) => {
   try {
-    // const frontend_url = "http://localhost:5174";
-    const frontend_url = "https://foodly-backend-kxdq.onrender.com"
+    const frontend_url = "http://localhost:5174";
+    
 
     // Create new order with authenticated user ID
     const newOrder = new orderModel({
