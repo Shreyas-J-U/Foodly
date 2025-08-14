@@ -12,7 +12,7 @@ const Verify = () => {
   const { url } = useContext(StoreContext);
 
   const verifyPayment = async () => {
-    const response = await axios.post("https://foodly-frontend.onrender.com" + "/api/order/verify", {
+    const response = await axios.post("https://localhost:4000" + "/api/order/verify", {
       success,
       orderId,
     });
